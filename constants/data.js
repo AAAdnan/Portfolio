@@ -1,11 +1,9 @@
 const userData = {
-  githubUsername: "manuarora700",
-  name: "Manu Arora",
+  githubUsername: "AAAdnan",
+  name: "Adnan Ahmed",
   designation: "Full-Stack Developer",
   avatarUrl: "/avatar.png",
-  email: "manuarorawork@gmail.com",
-  phone: "+91 9587738861",
-  address: "Jaipur, Rajasthan, India.",
+  email: "adnan.ahmed01@gmail.com",
   projects: [
     {
       title: "Tailwind Master Kit",
