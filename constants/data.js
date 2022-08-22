@@ -104,8 +104,7 @@ const userData = {
   resumeUrl:
     "https://drive.google.com/file/d/1xmE3BOmgM7TAOOgVp36xQIQvYDntDYoo/view?usp=sharing",
   socialLinks: {
-    twitter: "https://twitter.com/mannupaaji",
-    linkedin: "https://linkedin.com/in/manuarora28",
+    linkedin: "https://www.linkedin.com/in/adnan-ahmed-55185256/",
     github: "https://github.com/AAAdnan",
   },
 };
