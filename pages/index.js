@@ -6,6 +6,8 @@ import LatestCode from "../components/LatestCode";
 import Hero from "../components/Hero";
 import getLatestRepos from "@lib/getLatestRepos";
 import userData from "@constants/data";
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+
 
 export default function Home({ repositories }) {
   return (
@@ -13,9 +15,11 @@ export default function Home({ repositories }) {
       title="Adnan Ahmed - Developer, Writer, Creator"
       description="Portolio Website"
     >
+    <RoughNotationGroup show={true}>
       <Hero />
       <FavouriteProjects />
       <LatestCode repositories={repositories} />
+    </RoughNotationGroup>
     </ContainerBlock>
   );
 }

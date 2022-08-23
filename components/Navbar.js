@@ -35,7 +35,7 @@ export default function Navbar() {
         <div className="space-x-8 hidden md:block">
           <Link href="/about">
             <a
-              className={`text-base  ${
+              className={`text-base duration-300 hover:bg-green-800 rounded-md px-2 py-1 ${
                 router.asPath === "/about"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
@@ -61,7 +61,7 @@ export default function Navbar() {
           </Link>
           <Link href="/projects">
             <a
-              className={`text-base  ${
+              className={`text-base duration-300 hover:bg-yellow-600 rounded-md px-2 py-1 ${
                 router.asPath === "/projects"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
@@ -87,7 +87,7 @@ export default function Navbar() {
           </Link>
           <Link href="/experience">
             <a
-              className={`text-base  ${
+              className={`text-base duration-300 hover:bg-red-800 rounded-md px-2 py-1 ${
                 router.asPath === "/experience"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
@@ -113,7 +113,7 @@ export default function Navbar() {
           </Link>
           <Link href="/contact">
             <a
-              className={`text-base  ${
+              className={`text-base duration-300 hover:bg-blue-800 rounded-md px-2 py-1  ${
                 router.asPath === "/contact"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "

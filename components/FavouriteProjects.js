@@ -5,19 +5,17 @@ import { RainbowHighlight } from "./RainbowHighlight";
 
 export default function FavouriteProjects() {
 
-  const colors = ["#F8E16C", "#84CC16", "#10B981", "#3B82F6"];
+  const colors = ["#688e26", "#FAA613", "#F44708", "#F44708"];
 
   return (
     <div className="bg-[#F1F1F1] -mt-40 dark:bg-gray-900">
       <div className="max-w-6xl mx-auto">
         <header className="flex flex-col md:flex-row justify-between items-center pt-40 mx-10 md:my-20 lg:my-0">
-        <RoughNotationGroup show={true}>
-        <RainbowHighlight color={colors[0]}>
+        <RainbowHighlight color={colors[1]} order="1">
           <h1 className="text-6xl lg:text-9xl max-w-lg font-bold text-gray-700 my-20 md:my-0 md:text-white dark:text-white text-center">
             Projects
           </h1>
         </RainbowHighlight>
-        </RoughNotationGroup>
           <Link href="/projects">
             <a className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-gray-700">
               <svg

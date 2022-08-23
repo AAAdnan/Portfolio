@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import Link from "next/link";
 import getLatestRepos from "@lib/getLatestRepos";
+import { RainbowHighlight } from "./RainbowHighlight";
 import userData from "@constants/data";
 
 export default function LatestCode({ repositories }) {
+
   const [repos, setRepos] = useState([]);
+
+  const colors = ["#688e26", "#FAA613", "#A10702", "#F44708"];
 
   useEffect(async () => {
     // let latestRepos = await getLatestRepos(userData);
@@ -15,10 +20,11 @@ export default function LatestCode({ repositories }) {
     <section className="bg-[#F1F1F1] -mt-40 dark:bg-gray-900 pb-40">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center md:pt-40 mx-10">
-          <h1 className="text-6xl lg:text-9xl max-w-lg font-bold text-gray-500 my-20 md:my-0 md:text-white dark:text-gray-600 text-center lg:text-left">
+        <RainbowHighlight color={colors[2]}>
+          <h1 className="text-6xl lg:text-9xl max-w-lg font-bold text-gray-500 my-20 md:my-0 md:text-white dark:text-white text-center lg:text-left">
             Latest Code
           </h1>
-
+          </RainbowHighlight>
           <a
             href={`https://github.com/${userData.githubUsername}`}
             className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-gray-700"
