@@ -9,11 +9,12 @@ export default function Hero() {
 
   return (
     <>
+    <section className="bg-white bg-gray-800 mb-8">
     <div className="flex flex-row justify-center items-start overflow-hidden">
       {/* Text container */}
       <div className="w-full md:w-1/2 mx-auto text-center md:text-left lg:p-20">
       <RainbowHighlight color={colors[0]} order="1">
-            <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-white my-2">
+            <h1 className="text-4xl lg:text-8xl max-w-lg font-bold text-gray-500 my-20 md:my-0 md:text-white dark:text-white text-center lg:text-left">
               Developer
           </h1>
       </RainbowHighlight>
@@ -25,6 +26,7 @@ export default function Hero() {
       </div>
       </div>
     </div>
+    </section>
   </>
   );
 }

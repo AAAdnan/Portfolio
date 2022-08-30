@@ -1,7 +1,7 @@
 import React from "react";
 import { RoughNotation } from "react-rough-notation";
 
-export const RainbowHighlight = ({ color, children }) => {
+export const RainbowHighlight = ({ color, show, children }) => {
   // Change the animation duration depending on length of text we're animating (speed = distance / time)
   const animationDuration = Math.floor(30 * children.length);
 
@@ -12,6 +12,7 @@ export const RainbowHighlight = ({ color, children }) => {
       padding={[0, 5]}
       animationDuration={animationDuration}
       color={color}
+      show={show}
     >
       {children}
     </RoughNotation>

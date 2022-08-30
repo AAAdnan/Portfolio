@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef, useEffect, useState } from 'react';
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import Link from "next/link";
 import { RainbowHighlight } from "./RainbowHighlight";
@@ -7,12 +8,27 @@ export default function FavouriteProjects() {
 
   const colors = ["#688e26", "#FAA613", "#F44708", "#F44708"];
 
+  const [myElementIsVisible, updateMyElementIsVisible] = useState();
+
+  const myRef = useRef();
+
+  useEffect(() => {
+      const observer = new IntersectionObserver((entries, observer) => {
+      const entry = entries[0];
+      console.log(entry.isIntersecting)
+      updateMyElementIsVisible(entry.isIntersecting);
+    });
+    observer.observe(myRef.current)
+  }, []);
+
+
+
   return (
-    <div className="bg-[#F1F1F1] -mt-40 dark:bg-gray-900">
+    <div className="bg-white -mt-40 dark:bg-gray-800">
       <div className="max-w-6xl mx-auto">
         <header className="flex flex-col md:flex-row justify-between items-center pt-40 mx-10 md:my-20 lg:my-0">
-        <RainbowHighlight color={colors[1]} order="1">
-          <h1 className="text-6xl lg:text-9xl max-w-lg font-bold text-gray-700 my-20 md:my-0 md:text-white dark:text-white text-center">
+        <RainbowHighlight color={colors[1]} order="1" show={myElementIsVisible}>
+          <h1 ref={myRef} className="text-6xl lg:text-9xl max-w-lg font-bold text-gray-700 my-20 md:my-0 md:text-white dark:text-white text-center">
             Projects
           </h1>
         </RainbowHighlight>
