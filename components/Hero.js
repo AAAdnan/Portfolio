@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef, useEffect, useState } from 'react';
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "./RainbowHighlight";
 import userData from "@constants/data";
@@ -7,14 +8,29 @@ import Sparkles from './Sparkles'
 export default function Hero() {
   const colors = ["#688e26", "#FAA613", "#F44708", "#F44708"];
 
+  const [myElementIsVisible, updateMyElementIsVisible] = useState();
+
+  const myRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) => {
+    const entry = entries[0];
+    console.log(entry.isIntersecting)
+    updateMyElementIsVisible(entry.isIntersecting);
+  });
+  observer.observe(myRef.current)
+}, []);
+
+
+
   return (
     <>
-    <section className="bg-white bg-gray-800 mb-8">
+    <section className="bg-white dark:bg-gray-800 mb-8">
     <div className="flex flex-row justify-center items-start overflow-hidden">
       {/* Text container */}
       <div className="w-full md:w-1/2 mx-auto text-center md:text-left lg:p-20">
-      <RainbowHighlight color={colors[0]} order="1">
-            <h1 className="text-4xl lg:text-8xl max-w-lg font-bold text-gray-500 my-20 md:my-0 md:text-white dark:text-white text-center lg:text-left">
+      <RainbowHighlight color={colors[0]} order="1" show={myElementIsVisible}>
+            <h1 ref={myRef} className="text-4xl lg:text-8xl max-w-lg font-bold my-20 md:my-0 text-white text-center">
               Developer
           </h1>
       </RainbowHighlight>
