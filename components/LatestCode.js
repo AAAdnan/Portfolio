@@ -32,7 +32,7 @@ export default function LatestCode({ repositories }) {
     setRepos(repositories);
   }, []);
   return (
-    <section className="bg-white -mt-40 dark:bg-gray-800 pb-40">
+    <section className="bg-[#F1F1F1] -mt-40 dark:bg-gray-900 pb-40">
       <div className="max-w-6xl mx-auto my-20">
         <div className="flex flex-col justify-between items-center md:pt-40 mx-10">
         <RainbowHighlight color={colors[2]} show={myElementIsVisible}>
@@ -78,11 +78,11 @@ export default function LatestCode({ repositories }) {
 
 const GithubRepoCard = ({ latestRepo }) => {
   return (
-    <div className="text-center border-solid border-2 border-sky-500">
-      <h1 className="font-semibold text-xl dark:text-gray-200 text-gray-700">
+    <div className="text-center border-solid border-2 border-sky-500 p-8 rounded hover:bg-red-400 cursor-pointer">
+      <h1 className="font-semibold text-xl dark:text-gray-200 text-gray-600">
         {latestRepo.name}
       </h1>
-      <p className="text-base font-normal my-4 text-gray-500">
+      <p className="text-base font-normal my-4 text-gray-500 hover:text-white">
         {latestRepo.description}
       </p>
       <a
