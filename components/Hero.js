@@ -15,7 +15,6 @@ export default function Hero() {
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
     const entry = entries[0];
-    console.log(entry.isIntersecting)
     updateMyElementIsVisible(entry.isIntersecting);
   });
   observer.observe(myRef.current)
