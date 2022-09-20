@@ -24,7 +24,7 @@ export default function FavouriteProjects() {
 
 
   return (
-    <div className="bg-[#F1F1F1] -mt-40 dark:bg-gray-900">
+    <div className="bg-white -mt-40 dark:bg-gray-900">
       <div className="max-w-6xl mx-auto">
         <header className="flex flex-col md:flex-row justify-between items-center pt-40 mx-10 my-20">
         <RainbowHighlight color={colors[1]} order="1" show={myElementIsVisible}>

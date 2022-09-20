@@ -22,11 +22,13 @@ export default function Projects() {
   return (
     <section className="bg-[#F1F1F1] dark:bg-gray-900">
       <div className="max-w-6xl mx-auto h-48">
-      <RainbowHighlight color={colors[1]} show={myElementIsVisible}>
         <h1 ref={myRef} className="text-5xl md:text-9xl font-bold text-center">
+        <RainbowHighlight color={colors[1]} show={myElementIsVisible}>
+          <span>
           Projects
+          </span>
+          </RainbowHighlight>
         </h1>
-        </RainbowHighlight>
       </div>
       {/* Grid starts here */}
       <div className="bg-[#F1F1F1] dark:bg-gray-900">
@@ -69,7 +71,7 @@ const ProjectCard = ({ title, link, imgUrl, number, description, tech }) => {
       <section>
         <h1 className="pt-10">Technology Used</h1>
         <p className="pt-8">{description}</p>
-        <div className="grid grid-flow-col max-w-xs">
+        <div className="grid grid-flow-col auto-cols-fr max-w-xs text-center">
           {tech.map(element => (
              <img className="object-scale-down" src={element}></img>
           ))}
