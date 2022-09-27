@@ -30,7 +30,7 @@ const userData = {
       title: "Songifye",
       link: "https://songify-72495.web.app/lyricsearch",
       imgUrl: "/Songifye.png",
-      description: "App to search for song lyrics, as well as write and save your own song lyrics",
+      description: "App to search for song lyrics, write and save your own songs",
       tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", "redux.png", "firebase.png", "styled-components.png"],
     },
     {

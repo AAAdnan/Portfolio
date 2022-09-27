@@ -68,12 +68,11 @@ const ProjectCard = ({ title, link, imgUrl, number, description, tech }) => {
           {number.length === 1 ? "0" + number : number}
         </h1>
       </div>
-      <section>
-        <h1 className="pt-10">Technology Used</h1>
-        <p className="pt-8">{description}</p>
-        <div className="grid grid-flow-col auto-cols-fr max-w-xs text-center">
+      <section className="flex flex-col">
+        <p className="pt-8 pb-12">{description}</p>
+        <div className="flex justify-between">
           {tech.map(element => (
-             <img className="object-scale-down" src={element}></img>
+             <img className="h-20 w-20 mb-8" src={element}></img>
           ))}
         </div>
       </section>
