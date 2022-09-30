@@ -34,10 +34,10 @@ const userData = {
       tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", "redux.png", "firebase.png", "styled-components.png"],
     },
     {
-      title: "Algochurn",
-      link: "https://algochurn.com",
-      imgUrl: "/algochurn.png",
-      description: "An Argentinian based loan platform",
+      title: "Unsplash Album Builder",
+      link: "https://unsplashalbumbuilder.web.app/?q=beach",
+      imgUrl: "/Unsplash.png",
+      description: "An image album building using machine learning in order to find similar images",
       tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png"],
     },
     {
