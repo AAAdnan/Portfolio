@@ -9,43 +9,43 @@ const userData = {
       title: "OK Creditos",
       link: "https://www.okcreditos.com.ar/",
       imgUrl: "/OKCreditos.png",
-      description: "Argentinian based loan platform",
-      tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png"]
+      description: "Argentinian short-term loan platform, built with Angular.",
+      tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png", "/java.png", "bootstrap.png", "html.png"]
     },
     {
       title: "Topnomi",
       link: "https://astronomy-app.vercel.app/",
       imgUrl: "/Topnomi.png",
-      description: "App used to save night sky photos, track the ISS and search for astronomical photos",
-      tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", "graphql.png", "apollo.png"]
+      description: "App used to save night sky photos, track the ISS and search for astronomical photos. Uses graphql cloud database dgraph on the backend",
+      tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", "graphql.png", "apollo.png", "dgraph.png"]
     },
     {
       title: "Orysha",
       link: "https://orysha-ecomm.vercel.app/",
       imgUrl: "/Orysha.png",
-      description: "A prototype of an e-commerce store for Nigerian based artesanal fashion",
-      tech: ["nextjs.webp", "graphql.png", "apollo.png"],
+      description: "A Prototype of an e-commerce store for Nigerian based artesanal fashion. Uses graphql and apollo to communicate with the front-end and stripe API to process payments.",
+      tech: ["nextjs.webp", "graphql.png", "apollo.png", "stripe.png"],
     },
     {
       title: "Songifye",
       link: "https://songify-72495.web.app/lyricsearch",
       imgUrl: "/Songifye.png",
-      description: "App to search for song lyrics, write and save your own songs",
+      description: "App to search for song lyrics, write and save your own songs, using a firebase database and a redux store.",
       tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", "redux.png", "firebase.png", "styled-components.png"],
     },
     {
       title: "Unsplash Album Builder",
       link: "https://unsplashalbumbuilder.web.app/?q=beach",
       imgUrl: "/Unsplash.png",
-      description: "An image album building using machine learning in order to find similar images",
-      tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png"],
+      description: "An image album building using machine learning in order to find similar images, uses clarifai API. Also uses cypress end-to-end testing",
+      tech: ["clarifai.png", "firebase.png", "cypress.png", "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"],
     },
     {
-      title: "Playground",
+      title: "Michelin Search",
       link: "https://play.placeholdertech.in",
-      imgUrl: "/playground.png",
-      description: "An Argentinian based loan platform",
-      tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png"],
+      imgUrl: "/MichelinSearch.png",
+      description: "App to search for Michelin restaurants worldwide - uses node scraper, Mapbox API, Express, Nunjucks and Postrgres.",
+      tech: ["/express.png", "/postgres.png", "mapbox.png", "tailwind.png"],
     },
   ],
   about: {
