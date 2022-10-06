@@ -34,9 +34,7 @@ export default function Hero() {
           </h1>
       </RainbowHighlight>
       <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus metus lorem, pretium dapibus erat ac, mollis posuere arcu. Curabitur nec nisl eros. Proin varius posuere mi, at efficitur dolor. Cras at risus ipsum. Nullam volutpat leo nec nisl placerat, non ullamcorper magna dictum. Praesent quis ex ex. Morbi nec pellentesque eros. Donec fermentum mauris odio, eget tempus nibh ultricies ac. Donec purus nisl, gravida pretium odio ac, finibus rhoncus urna.
-
-        Pellentesque ut auctor lectus. Quisque vitae lacinia lacus. Duis egestas orci at augue sagittis vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut a aliquet ligula, sit amet iaculis ligula. Sed id varius est. Nam auctor congue convallis. Aliquam erat volutpat.
+        <p className="pt-8">Hi I'm Adnan - I like to build things. Currently working in React in front-end development.
         </p>
       </div>
       </div>

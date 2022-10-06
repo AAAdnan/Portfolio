@@ -13,6 +13,13 @@ const userData = {
       tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png", "/java.png", "bootstrap.png", "html.png"]
     },
     {
+      title: "Canopie",
+      link: "https://www.canopie.app/",
+      imgUrl: "/Canopie.png",
+      description: "Early motherhood healthcare app.",
+      tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", "html.png", "apollo.png", "dgraph.png"]
+    },
+    {
       title: "Topnomi",
       link: "https://astronomy-app.vercel.app/",
       imgUrl: "/Topnomi.png",
@@ -37,7 +44,7 @@ const userData = {
       title: "Unsplash Album Builder",
       link: "https://unsplashalbumbuilder.web.app/?q=beach",
       imgUrl: "/Unsplash.png",
-      description: "An image album building using machine learning in order to find similar images, uses clarifai API. Also uses cypress end-to-end testing",
+      description: "An Image Album builder using machine learning in order to find similar images, uses clarifai API and cypress end-to-end testing.",
       tech: ["clarifai.png", "firebase.png", "cypress.png", "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"],
     },
     {
@@ -50,22 +57,19 @@ const userData = {
   ],
   about: {
     title:
-      "I'm a software developer that loves building products and web applications. I also have a background in financial markets, and have been building algorithmic trading strategies for several years.",
+      "I'm a software developer that loves building products and web applications. I also have a background in financial markets, and have been building algorithmic trading strategies for several years",
     description: [
-      `I've been developing full-stack application since I was 10 years old. I didn't know what full-stack meant at that time because the term was not coined back then. I'm so out of content right now that I'm literally crying writing this text since lorem text is so 2012 now.`,
-      `After learning HTML and struggling with CSS, I came up with a brilliant idea of using bootstrap so that I don't have to style everything by myself and - for obvious reasons - if you knew bootstrap, you were cool.`,
-      `But now, I'm a legend. I've been coding in React, Angular, Vue, Svelte, Node.js, Express, Fastify, MongoDB, MySQL, Bootstrap, Tailwind, C, C++, C#, Rust, Haskell, Perl, PHP, Assembly, Logo and YouDontKnowShit programming language etc to name a few. Although I barely know the syntax (Psst, Stack overflow!), I consider myself a Ninja developer I'm laughing right now.`,
+      `I've been developing full-stack applications for the past five years. I work primarily with React on the front-end side and node on the back-end side.`
     ],
-    currentProject: "Tailwind Master Kit",
+    currentProject: '',
     currentProjectUrl: "https://tailwindmasterkit.com",
   },
   experience: [
     {
       title: "Freelance Developer",
-      company: "mroads",
       year: "2022",
       companyLink: "https://mroads.com",
-      desc: "Completed several freelance coding projects.",
+      desc: "Completed several freelance coding projects - including healthcare start-up app Canopie.",
     },
     {
       title: "Professional Trader",

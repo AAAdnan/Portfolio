@@ -72,7 +72,7 @@ const ProjectCard = ({ title, link, imgUrl, number, description, tech }) => {
         <p className="p-8 text-center">{description}</p>
         <div className="flex justify-evenly">
           {tech.map(element => (
-             <img className="h-20 w-20 mb-8" src={element}></img>
+             <img className="h-20 w-20 mb-8 hover:scale-125" src={element}></img>
           ))}
         </div>
       </section>
