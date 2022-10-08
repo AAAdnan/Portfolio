@@ -28,12 +28,12 @@ export default function FavouriteProjects() {
       <div className="max-w-6xl mx-auto">
         <header className="flex flex-col md:flex-row justify-between items-center pt-40 mx-10 my-20">
         <RainbowHighlight color={colors[1]} order="1" show={myElementIsVisible}>
-          <h1 ref={myRef} className="text-6xl lg:text-9xl max-w-lg font-bold my-20 md:my-0 text-white text-center">
+          <h1 ref={myRef} className="text-5xl lg:text-9xl max-w-lg font-bold md:my-0 text-white text-center">
             Projects
           </h1>
         </RainbowHighlight>
           <Link href="/projects">
-            <a className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-gray-700">
+            <a className="mt-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-gray-700">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -54,7 +54,7 @@ export default function FavouriteProjects() {
           </Link>
         </header>
         {/* Grid starts here */}
-        <div className="grid md:grid-cols-3 gap-8 lg:-mt-8 pb-40">
+        <div className="grid px-12 mb:px-0 md:grid-cols-3 gap-8 lg:-mt-8 pb-40">
           {/* Single card */}
           <a
             href="https://www.okcreditos.com.ar/"

@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10 md:py-20">
-      <div className="flex  md:flex-row justify-between items-center">
+      <div className="flex md:flex-row justify-between items-center">
         {/* Logo / Home / Text */}
 
         <div className="flex flex-col">
@@ -189,7 +189,7 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-      <div className="space-x-8 block md:hidden mt-4">
+      <div className="block text-center md:hidden mt-4">
       <Link href="/about">
         <a
           className={`text-base duration-300 hover:bg-green-800 hover:text-white rounded-md px-2 py-1 ${

@@ -27,9 +27,9 @@ export default function Hero() {
     <section className="bg-[#F1F1F1] dark:bg-gray-900 mb-8">
     <div className="flex flex-row justify-center items-start overflow-hidden">
       {/* Text container */}
-      <div className="w-full md:w-1/2 mx-auto text-center md:text-left lg:p-20">
+      <div className="w-full w-1/2 mx-auto text-center md:text-left lg:p-20">
       <RainbowHighlight color={colors[0]} order="1" show={myElementIsVisible}>
-            <h1 ref={myRef} className="text-4xl lg:text-8xl max-w-lg font-bold my-20 md:my-0 text-white text-center">
+            <h1 ref={myRef} className="text-4xl lg:text-8xl max-w-lg font-bold md:my-0 text-white text-center">
               Developer
           </h1>
       </RainbowHighlight>
