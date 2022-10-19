@@ -31,14 +31,14 @@ const userData = {
       link: "https://orysha-ecomm.vercel.app/",
       imgUrl: "/Orysha.png",
       description: "A Prototype of an e-commerce store for Nigerian based artesanal fashion. Uses graphql and apollo to communicate with the front-end and stripe API to process payments.",
-      tech: ["nextjs.webp", "graphql.png", "apollo.png", "stripe.png"],
+      tech: ["next-square.png", "graphql.png", "apollo.png", "stripe.png"],
     },
     {
       title: "Songifye",
-      link: "https://songify-72495.web.app/lyricsearch",
+      link: "https://songify-72495.firebaseapp.com",
       imgUrl: "/Songifye.png",
       description: "App to search for song lyrics, write and save your own songs, using a firebase database and a redux store.",
-      tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", "redux.png", "firebase.png", "styled-components.png"],
+      tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", "redux.png", "firebase.png", "styled-components-square.png"],
     },
     {
       title: "Unsplash Album Builder",
@@ -52,7 +52,7 @@ const userData = {
       link: "https://play.placeholdertech.in",
       imgUrl: "/MichelinSearch.png",
       description: "App to search for Michelin restaurants worldwide - uses node scraper, Mapbox API, Express, Nunjucks and Postrgres.",
-      tech: ["/express.png", "/postgres.png", "mapbox.png", "tailwind.png"],
+      tech: ["/node.png", "/postgres.png", "mapbox.png", "tailwind-square.jpg"],
     },
   ],
   about: {

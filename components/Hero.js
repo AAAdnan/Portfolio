@@ -24,7 +24,7 @@ export default function Hero() {
 
   return (
     <>
-    <section className="bg-[#F1F1F1] dark:bg-gray-900 mb-8">
+    <section className="bg-[#F1F1F1] dark:bg-gray-900 mb-6">
     <div className="flex flex-row justify-center items-start overflow-hidden">
       {/* Text container */}
       <div className="w-full w-1/2 mx-auto text-center md:text-left lg:p-20">
@@ -34,7 +34,9 @@ export default function Hero() {
           </h1>
       </RainbowHighlight>
       <div>
-        <p className="pt-8">Hi I'm Adnan - I like to build things. Currently working in React in front-end development.
+        <p className="pt-12 text-lg">Hi<br></br> I'm Adnan 👷🏽‍♂️ <br></br> I like to 🔧 things. <br></br> I occasionally ✍🏽 things<br></br>
+        
+        Currently 🧑🏽‍💻 in React in front-end development.
         </p>
       </div>
       </div>

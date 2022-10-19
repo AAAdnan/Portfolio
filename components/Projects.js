@@ -22,7 +22,7 @@ export default function Projects() {
   return (
     <section className="bg-[#F1F1F1] dark:bg-gray-900">
       <div className="mx-auto">
-        <h1 ref={myRef} className="text-4xl md:text-8xl font-bold text-center">
+        <h1 ref={myRef} className="text-4xl text-white md:text-8xl font-bold text-center">
         <RainbowHighlight color={colors[1]} show={myElementIsVisible}>
           <span>
           Projects
