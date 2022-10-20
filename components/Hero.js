@@ -7,7 +7,7 @@ import Sparkles from './Sparkles'
 import AnimatedText from 'react-animated-text-content';
 
 export default function Hero() {
-  const colors = ["#688e26", "#FAA613", "#F44708", "#F44708"];
+  const colors = ["#30D5C8", "#FAA613", "#F44708", "#F44708"];
 
   const [myElementIsVisible, updateMyElementIsVisible] = useState();
 

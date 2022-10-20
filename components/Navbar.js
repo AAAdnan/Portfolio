@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import userData from "@constants/data";
+import Image from 'next/image'
 
 export default function Navbar() {
   const router = useRouter();
@@ -18,11 +19,13 @@ export default function Navbar() {
     <div className="max-w-6xl mx-auto px-4 py-10 md:py-20">
       <div className="flex md:flex-row justify-between items-center">
         {/* Logo / Home / Text */}
-
+        <Link href="/">
+          <Image src="/favicon.ico" className="cursor-pointer" alt="Picture rocket" width="50" height="60" />
+        </Link>
         <div className="flex flex-col">
           <Link href="/">
             <a>
-              <h1 className="font-semibold text-xl dark:text-gray-100">
+              <h1 className="hover:-rotate-3 hover:scale-110 font-semibold text-xl dark:text-gray-100">
                 {userData.name}
               </h1>
               <p className="text-base font-light text-gray-500 dark:text-gray-300">
