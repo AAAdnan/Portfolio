@@ -4,6 +4,7 @@ import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "./RainbowHighlight";
 import userData from "@constants/data";
 import Sparkles from './Sparkles'
+import AnimatedText from 'react-animated-text-content';
 
 export default function Hero() {
   const colors = ["#688e26", "#FAA613", "#F44708", "#F44708"];
@@ -34,10 +35,101 @@ export default function Hero() {
           </h1>
       </RainbowHighlight>
       <div>
-        <p className="pt-12 text-lg">Hi<br></br> I'm Adnan 👷🏽‍♂️ <br></br> I like to 🔧 things. <br></br> I occasionally ✍🏽 things<br></br>
-        
-        Currently 🧑🏽‍💻 in React in front-end development.
-        </p>
+      <AnimatedText
+        type="words" // animate words or chars
+        animation={{
+          x: '200px',
+          y: '-20px',
+          scale: 1.1,
+          ease: 'ease-in-out',
+        }}
+        animationType="throw"
+        interval={0.06}
+        duration={0.8}
+        tag="p"
+        className="pt-4 text-2xl text-center"
+        includeWhiteSpaces
+        threshold={0.1}
+        rootMargin="20%"
+        >
+          Hi
+        </AnimatedText>
+        <AnimatedText
+        type="words" // animate words or chars
+        animation={{
+          x: '200px',
+          y: '-20px',
+          scale: 1.1,
+          ease: 'ease-in-out',
+        }}
+        animationType="throw"
+        interval={0.06}
+        duration={0.8}
+        tag="p"
+        className="text-lg text-center"
+        includeWhiteSpaces
+        threshold={0.1}
+        rootMargin="20%"
+        >
+          I'm Adnan 👷🏽‍♂️ 
+        </AnimatedText>
+        <AnimatedText
+        type="words" // animate words or chars
+        animation={{
+          x: '200px',
+          y: '-20px',
+          scale: 1.1,
+          ease: 'ease-in-out',
+        }}
+        animationType="throw"
+        interval={0.06}
+        duration={0.8}
+        tag="p"
+        className="text-lg text-center"
+        includeWhiteSpaces
+        threshold={0.1}
+        rootMargin="20%"
+        >
+          I like to 🔧 things.
+        </AnimatedText>
+        <AnimatedText
+        type="words" // animate words or chars
+        animation={{
+          x: '200px',
+          y: '-20px',
+          scale: 1.1,
+          ease: 'ease-in-out',
+        }}
+        animationType="throw"
+        interval={0.06}
+        duration={0.8}
+        tag="p"
+        className="text-lg text-center"
+        includeWhiteSpaces
+        threshold={0.1}
+        rootMargin="20%"
+        >
+        I occasionally ✍🏽 things
+        </AnimatedText>
+        <AnimatedText
+        type="words" // animate words or chars
+        animation={{
+          x: '200px',
+          y: '-20px',
+          scale: 1.1,
+          ease: 'ease-in-out',
+        }}
+        animationType="throw"
+        interval={0.06}
+        duration={0.8}
+        tag="p"
+        className="text-lg text-center"
+        includeWhiteSpaces
+        threshold={0.1}
+        rootMargin="20%"
+        >
+        Currently 🧑🏽‍💻 in React web development
+        </AnimatedText>
       </div>
       </div>
     </div>

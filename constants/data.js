@@ -31,7 +31,7 @@ const userData = {
       link: "https://orysha-ecomm.vercel.app/",
       imgUrl: "/Orysha.png",
       description: "A Prototype of an e-commerce store for Nigerian based artesanal fashion. Uses graphql and apollo to communicate with the front-end and stripe API to process payments.",
-      tech: ["next-square.png", "graphql.png", "apollo.png", "stripe.png"],
+      tech: ["next-square.png", "graphql.png", "apollo.png", "stripe-square.png"],
     },
     {
       title: "Songifye",
@@ -45,7 +45,7 @@ const userData = {
       link: "https://unsplashalbumbuilder.web.app/?q=beach",
       imgUrl: "/Unsplash.png",
       description: "An Image Album builder using machine learning in order to find similar images, uses clarifai API and cypress end-to-end testing.",
-      tech: ["clarifai.png", "firebase.png", "cypress.png", "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"],
+      tech: ["clarifai.png", "firebase.png", "cypress-square.png", "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"],
     },
     {
       title: "Michelin Search",
@@ -68,8 +68,7 @@ const userData = {
     {
       title: "Freelance Developer",
       year: "2022",
-      companyLink: "https://mroads.com",
-      desc: "Completed several freelance coding projects - including healthcare start-up app Canopie.",
+      desc: "Front-end Developer at Canopie, coded several other freelance projects.",
     },
     {
       title: "Professional Trader",
