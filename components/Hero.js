@@ -5,6 +5,7 @@ import { RainbowHighlight } from "./RainbowHighlight";
 import userData from "@constants/data";
 import Sparkles from './Sparkles'
 import AnimatedText from 'react-animated-text-content';
+import { AnimatePresence, motion } from 'framer-motion'
 
 export default function Hero() {
   const colors = ["#30D5C8", "#FAA613", "#F44708", "#F44708"];
@@ -62,7 +63,7 @@ export default function Hero() {
           scale: 1.1,
           ease: 'ease-in-out',
         }}
-        animationType="throw"
+        animationType="rifle"
         interval={0.06}
         duration={0.8}
         tag="p"
@@ -81,7 +82,7 @@ export default function Hero() {
           scale: 1.1,
           ease: 'ease-in-out',
         }}
-        animationType="throw"
+        animationType="rifle"
         interval={0.06}
         duration={0.8}
         tag="p"
@@ -100,7 +101,7 @@ export default function Hero() {
           scale: 1.1,
           ease: 'ease-in-out',
         }}
-        animationType="throw"
+        animationType="rifle"
         interval={0.06}
         duration={0.8}
         tag="p"
@@ -119,7 +120,7 @@ export default function Hero() {
           scale: 1.1,
           ease: 'ease-in-out',
         }}
-        animationType="throw"
+        animationType="rifle"
         interval={0.06}
         duration={0.8}
         tag="p"

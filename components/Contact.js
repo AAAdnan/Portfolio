@@ -1,7 +1,44 @@
 import React from "react";
 import userData from "@constants/data";
+import { useState } from 'react'
+
 
 export default function Contact() {
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (e) => { 
+    e.preventDefault()
+    console.log('Sending')
+
+    let data = {
+        name,
+        email,
+        message
+      }
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      if(res.status === 200) {
+        console.log('Response succeeded!')
+        setSubmitted(true)
+        setName('')
+        setEmail('')
+        setBody('')
+      }
+    })
+  }
+
   return (
     <section>
       <div className="max-w-6xl mx-auto h-48 bg-[#F1F1F1] dark:bg-gray-900 antialiased">
@@ -53,6 +90,7 @@ export default function Contact() {
             </label>
             <input
               type="text"
+              onChange={(e)=>{setName(e.target.value)}} 
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="name"
             />
@@ -61,11 +99,13 @@ export default function Contact() {
             </label>
             <input
               type="text"
+              onChange={(e)=>{setEmail(e.target.value)}} 
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="email"
             />
             <label
               htmlFor="message"
+              onChange={(e)=>{setMessage(e.target.value)}} 
               className="text-sm text-gray-600 mx-4 mt-4"
             >
               Message
@@ -79,6 +119,7 @@ export default function Contact() {
             <button
               type="submit"
               className="bg-blue-500 rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold"
+              onClick={(e)=>{handleSubmit(e)}}
             >
               Send Message
             </button>

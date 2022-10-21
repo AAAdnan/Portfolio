@@ -4,6 +4,7 @@ import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import userData from "@constants/data";
 import Image from 'next/image'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export default function Navbar() {
   const router = useRouter();
@@ -19,9 +20,15 @@ export default function Navbar() {
     <div className="max-w-6xl mx-auto px-4 py-10 md:py-20">
       <div className="flex md:flex-row justify-between items-center">
         {/* Logo / Home / Text */}
-        <Link href="/">
-          <Image src="/favicon.ico" className="cursor-pointer" alt="Picture rocket" width="50" height="60" />
-        </Link>
+          <Link href="/">
+          <motion.div 
+            drag
+            dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+            dragElastic={0.8}
+          >
+            <Image src="/favicon.ico" className="cursor-pointer" alt="Picture rocket" width="50" height="60" />
+          </motion.div>
+          </Link>
         <div className="flex flex-col">
           <Link href="/">
             <a>
