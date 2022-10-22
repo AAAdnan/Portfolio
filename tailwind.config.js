@@ -5,6 +5,11 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
+      cursor: {
+        'fancy': 'url(/pencil.png), auto',
+        'laptop': 'url(/laptop.png), auto',
+        'projects': 'url(/paste.png), auto',
+      },
       transitionDuration: {
         0: "0ms",
         2000: "2000ms",

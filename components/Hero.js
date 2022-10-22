@@ -5,7 +5,6 @@ import { RainbowHighlight } from "./RainbowHighlight";
 import userData from "@constants/data";
 import Sparkles from './Sparkles'
 import AnimatedText from 'react-animated-text-content';
-import { AnimatePresence, motion } from 'framer-motion'
 
 export default function Hero() {
   const colors = ["#30D5C8", "#FAA613", "#F44708", "#F44708"];
@@ -26,7 +25,7 @@ export default function Hero() {
 
   return (
     <>
-    <section className="bg-[#F1F1F1] dark:bg-gray-900 mb-6">
+    <section className="bg-[#F1F1F1] dark:bg-gray-900 mb-6 cursor-fancy">
     <div className="flex flex-row justify-center items-start overflow-hidden">
       {/* Text container */}
       <div className="w-full w-1/2 mx-auto text-center md:text-left lg:p-20">
