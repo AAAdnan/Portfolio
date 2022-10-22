@@ -10,49 +10,50 @@ const userData = {
       link: "https://www.okcreditos.com.ar/",
       imgUrl: "/OKCreditos.png",
       description: "Argentinian short-term loan platform, built with Angular.",
-      tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png", "/java.png", "bootstrap.png", "html.png"]
+      tech: [ {image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png", text: "Angular"},  {image: "/java.png", text: "Java"}, {image: "bootstrap.png", text: "Boostrap"}, {image: "html.png", text: "HTML"}],
     },
     {
       title: "Canopie",
       link: "https://www.canopie.app/",
       imgUrl: "/Canopie.png",
       description: "Early motherhood healthcare app.",
-      tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", "html.png", "apollo.png", "dgraph.png"]
+      tech: [{ image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", text: "React"}, {image: "html.png", text: "HTML"}, { image: "apollo.png", text: "Apollo"}, { image: "dgraph.png", text: "Dgraph"}],
     },
     {
       title: "Topnomi",
       link: "https://astronomy-app.vercel.app/",
       imgUrl: "/Topnomi.png",
       description: "App used to save night sky photos, track the ISS and search for astronomical photos. Uses graphql cloud database dgraph on the backend",
-      tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", "graphql.png", "apollo.png", "dgraph.png"]
+      tech: [ {image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", text: "React"}, { image: "graphql.png", text: "GraphQL"}, { image: "apollo.png", text: "Apollo"}, {image: "dgraph.png", text: "DGraph"}],
     },
     {
       title: "Orysha",
       link: "https://orysha-ecomm.vercel.app/",
       imgUrl: "/Orysha.png",
       description: "A Prototype of an e-commerce store for Nigerian based artesanal fashion. Uses graphql and apollo to communicate with the front-end and stripe API to process payments.",
-      tech: ["next-square.png", "graphql.png", "apollo.png", "stripe-square.png"],
+      tech: [{ image: "next-square.png", text: "NextJS"}, {image: "graphql.png", text: "GraphQL"}, { image: "apollo.png", text: "Apollo"}, {image: "stripe-square.png", text: "StripeAPI"}],
+
     },
     {
       title: "Songifye",
       link: "https://songify-72495.firebaseapp.com",
       imgUrl: "/Songifye.png",
       description: "App to search for song lyrics, write and save your own songs, using a firebase database and a redux store.",
-      tech: ["https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", "redux.png", "firebase.png", "styled-components-square.png"],
+      tech: [{ image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", text: "React"}, {image: "redux.png", text: "Redux"}, {image: "firebase.png", text: "Firebase"}, {image: "styled-components-square.png", text: "Styled Components"}],
     },
     {
       title: "Unsplash Album Builder",
       link: "https://unsplashalbumbuilder.web.app/?q=beach",
       imgUrl: "/Unsplash.png",
       description: "An Image Album builder using machine learning in order to find similar images, uses clarifai API and cypress end-to-end testing.",
-      tech: ["clarifai.png", "firebase.png", "cypress-square.png", "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"],
+      tech: [{image: "clarifai.png", text: "ClarifaiAPI"}, {image: "firebase.png", text: "Firebase"}, {image: "cypress-square.png", text: "Cypress"}, {image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", text: "React"}],
     },
     {
       title: "Michelin Search",
       link: "https://play.placeholdertech.in",
       imgUrl: "/MichelinSearch.png",
       description: "App to search for Michelin restaurants worldwide - uses node scraper, Mapbox API, Express, Nunjucks and Postrgres.",
-      tech: ["/node.png", "/postgres.png", "mapbox.png", "tailwind-square.jpg"],
+      tech: [{image: "/node.png", text: "NodeJS"}, {image: "/postgres.png", text: "POSTGRES"}, { image: "mapbox.png", text: "Mapbox" } , { image: "tailwind-square.jpg", text: "Tailwind"}],
     },
   ],
   about: {

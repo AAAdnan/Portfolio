@@ -21,7 +21,7 @@ export default function Projects() {
 
   return (
     <section className="bg-[#F1F1F1] dark:bg-gray-900">
-      <div className="mx-auto cursor-projects">
+      <div className="mx-auto">
         <h1 ref={myRef} className="text-4xl text-white md:text-8xl font-bold text-center">
         <RainbowHighlight color={colors[1]} show={myElementIsVisible}>
           <span>
@@ -70,9 +70,14 @@ const ProjectCard = ({ title, link, imgUrl, number, description, tech }) => {
       </div>
       <section className="flex flex-col">
         <p className="p-8 text-center">{description}</p>
-        <div className="flex justify-evenly">
+        <div className="flex justify-evenly pb-8">
           {tech.map(element => (
-             <img className=" md:h-20 md:w-20 h-10 w-10 mb-8 hover:scale-125" src={element}></img>
+            <>
+              <div>
+                <img className=" md:h-20 md:w-20 h-10 w-10 mb-8 hover:scale-125" src={element.image}></img>
+                <p className="hover:scale-125 text-center">{element.text}</p>
+             </div>
+            </>
           ))}
         </div>
       </section>
