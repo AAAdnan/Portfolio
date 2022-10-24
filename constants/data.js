@@ -10,7 +10,7 @@ const userData = {
       link: "https://www.okcreditos.com.ar/",
       imgUrl: "/OKCreditos.png",
       description: "Argentinian short-term loan platform, built with Angular.",
-      tech: [ {image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png", text: "Angular"},  {image: "/java.png", text: "Java"}, {image: "bootstrap.png", text: "Boostrap"}, {image: "html.png", text: "HTML"}],
+      tech: [ {image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png", text: "Angular"},  {image: "/java.png", text: "Java"}, {image: "bootstrap.png", text: "Bootstrap"}, {image: "html.png", text: "HTML"}],
     },
     {
       title: "Canopie",
@@ -39,21 +39,21 @@ const userData = {
       link: "https://songify-72495.firebaseapp.com",
       imgUrl: "/Songifye.png",
       description: "App to search for song lyrics, write and save your own songs, using a firebase database and a redux store.",
-      tech: [{ image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", text: "React"}, {image: "redux.png", text: "Redux"}, {image: "firebase.png", text: "Firebase"}, {image: "styled-components-square.png", text: "Styled Components"}],
+      tech: [{ image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", text: "React"}, {image: "redux.png", text: "Redux"}, {image: "firebase.png", text: "Firebase"}, {image: "styled-components-square.png", text: "Styled"}],
     },
     {
       title: "Unsplash Album Builder",
       link: "https://unsplashalbumbuilder.web.app/?q=beach",
       imgUrl: "/Unsplash.png",
       description: "An Image Album builder using machine learning in order to find similar images, uses clarifai API and cypress end-to-end testing.",
-      tech: [{image: "clarifai.png", text: "ClarifaiAPI"}, {image: "firebase.png", text: "Firebase"}, {image: "cypress-square.png", text: "Cypress"}, {image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", text: "React"}],
+      tech: [{image: "clarifai.png", text: "Clarifai"}, {image: "firebase.png", text: "Firebase"}, {image: "cypress-square.png", text: "Cypress"}, {image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", text: "React"}],
     },
     {
       title: "Michelin Search",
       link: "https://play.placeholdertech.in",
       imgUrl: "/MichelinSearch.png",
       description: "App to search for Michelin restaurants worldwide - uses node scraper, Mapbox API, Express, Nunjucks and Postrgres.",
-      tech: [{image: "/node.png", text: "NodeJS"}, {image: "/postgres.png", text: "POSTGRES"}, { image: "mapbox.png", text: "Mapbox" } , { image: "tailwind-square.jpg", text: "Tailwind"}],
+      tech: [{image: "/node.png", text: "NodeJS"}, {image: "/postgres.png", text: "SQL"}, { image: "mapbox.png", text: "Mapbox" } , { image: "tailwind-square.jpg", text: "Tailwind"}],
     },
   ],
   about: {
