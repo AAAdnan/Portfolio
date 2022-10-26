@@ -1,17 +1,52 @@
 import React from "react";
 import userData from "@constants/data";
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Modal from './Modal';
 import { useForm } from "react-hook-form";
 
 
 export default function Contact() {
 
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState(true)
+  const [isModalOpen, setModalOpen] = useState(false);
+
 
   const { register, handleSubmit } = useForm();
 
+  function useOnClickOutside(ref, handler) {
+    useEffect(
+      () => {
+        const listener = (event) => {
+          // Do nothing if clicking ref's element or descendent elements
+          if (!ref.current || ref.current.contains(event.target)) {
+            return;
+          }
+          handler(event);
+        };
+        document.addEventListener("mousedown", listener);
+        document.addEventListener("touchstart", listener);
+        return () => {
+          document.removeEventListener("mousedown", listener);
+          document.removeEventListener("touchstart", listener);
+        };
+      },
+      // Add ref and handler to effect dependencies
+      // It's worth noting that because passed in handler is a new ...
+      // ... function on every render that will cause this effect ...
+      // ... callback/cleanup to run every render. It's not a big deal ...
+      // ... but to optimize you can wrap handler in useCallback before ...
+      // ... passing it into this hook.
+      [ref, handler]
+    );
+  }
+
+  const ref = useRef();
+  // State for our modal
+  // Call hook passing in the ref and a function to call on outside click
+  useOnClickOutside(ref, () => setModalOpen(false));
+
   const handleRegistration = (data) => {
+    setModalOpen(true)
     fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -30,7 +65,7 @@ export default function Contact() {
 
   return (
     <>
-    <section onSubmit={handleSubmit(handleRegistration)}>
+    <section ref={ref} onSubmit={handleSubmit(handleRegistration)} >
       <div className="max-w-6xl mx-auto h-48 bg-[#F1F1F1] dark:bg-gray-900 antialiased">
         <h1 className=" text-5xl md:text-9xl font-bold text-center md:text-left">
           Contact
@@ -119,8 +154,8 @@ export default function Contact() {
         </div>
       </div>
     </section> 
-    { submitted ? (
-      <Modal onClick={() => setSubmitted(false)} />
+    { isModalOpen ? (
+      <Modal />
     ) : null
     }
     </>
