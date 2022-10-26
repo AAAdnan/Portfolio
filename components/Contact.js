@@ -1,6 +1,7 @@
 import React from "react";
 import userData from "@constants/data";
 import { useState } from 'react'
+import Modal from './Modal';
 
 
 export default function Contact() {
@@ -11,7 +12,8 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
 
   const handleSubmit = (e) => { 
-    console.log(message, 'this is the name: ' + name , email)
+    setSubmitted(true)
+    console.log(submitted)
     e.preventDefault()
     console.log('Sending')
 
@@ -32,7 +34,6 @@ export default function Contact() {
       console.log('Response received')
       if(res.status === 200) {
         console.log('Response succeeded!')
-        setSubmitted(true)
         setName('')
         setEmail('')
         setBody('')
@@ -41,7 +42,8 @@ export default function Contact() {
   }
 
   return (
-    <section>
+    <>
+    <section onClick={() => setSubmitted(false)}>
       <div className="max-w-6xl mx-auto h-48 bg-[#F1F1F1] dark:bg-gray-900 antialiased">
         <h1 className=" text-5xl md:text-9xl font-bold text-center md:text-left">
           Contact
@@ -127,6 +129,11 @@ export default function Contact() {
           </form>
         </div>
       </div>
-    </section>
+    </section> 
+    { submitted ? (
+      <Modal onClick={() => setSubmitted(false)} />
+    ) : null
+    }
+    </>
   );
 }
