@@ -2,27 +2,16 @@ import React from "react";
 import userData from "@constants/data";
 import { useState } from 'react'
 import Modal from './Modal';
+import { useForm } from "react-hook-form";
 
 
 export default function Contact() {
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = (e) => { 
-    setSubmitted(true)
-    console.log(submitted)
-    e.preventDefault()
-    console.log('Sending')
+  const { register, handleSubmit } = useForm();
 
-    let data = {
-        name,
-        email,
-        message
-      }
-
+  const handleRegistration = (data) => {
     fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -33,23 +22,21 @@ export default function Contact() {
     }).then((res) => {
       console.log('Response received')
       if(res.status === 200) {
+        setSubmitted(true)
         console.log('Response succeeded!')
-        setName('')
-        setEmail('')
-        setBody('')
       }
     })
-  }
+  };
 
   return (
     <>
-    <section onClick={() => setSubmitted(false)}>
+    <section onSubmit={handleSubmit(handleRegistration)}>
       <div className="max-w-6xl mx-auto h-48 bg-[#F1F1F1] dark:bg-gray-900 antialiased">
         <h1 className=" text-5xl md:text-9xl font-bold text-center md:text-left">
           Contact
         </h1>
       </div>
-      <div className="relative z-10 rounded-md shadow-md bg-[#02044A] p-4 md:p-10 lg:p-20 max-w-6xl mx-auto mb-20 -mt-4">
+      <div className="relative z-10 rounded-md shadow-md bg-[#02044A] p-6 md:p-10 lg:p-20 max-w-6xl mx-auto mb-20 -mt-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="md:ml-4">
             <header className="">
@@ -80,7 +67,7 @@ export default function Contact() {
             <div className="social-icons flex flex-row space-x-8">
               <a
                 href={userData.socialLinks.linkedin}
-                className="h-10 w-10 rounded-full hover:bg-blue-500 flex items-center justify-center cursor-pointer"
+                className="h-10 w-10 rounded-full hover:bg-blue-500 bg-white flex items-center justify-center cursor-pointer"
               >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z"/></svg>
               </a>
@@ -93,9 +80,9 @@ export default function Contact() {
             </label>
             <input
               type="text"
-              onChange={(e)=>{setName(e.target.value)}} 
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="name"
+              {...register('name', { required: true })}
             />
             <label htmlFor="email" className="text-sm text-gray-600 mx-4 mt-4">
               Email
@@ -105,6 +92,7 @@ export default function Contact() {
               onChange={(e)=>{setEmail(e.target.value)}} 
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="email"
+              {...register('email', { required: true })}
             />
             <label
               htmlFor="message"
@@ -118,6 +106,7 @@ export default function Contact() {
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="message"
               onChange={(e)=>{setMessage(e.target.value)}} 
+              {...register('message', { required: true })}
             ></textarea>
             <button
               type="submit"
