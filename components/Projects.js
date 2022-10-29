@@ -39,7 +39,8 @@ export default function Projects() {
               link={proj.link}
               imgUrl={proj.imgUrl}
               number={`${idx + 1}`}
-              description={proj.description}
+              need={proj.need}
+              contribution={proj.contribution}
               tech={proj.tech}
             />
           ))}
@@ -49,7 +50,22 @@ export default function Projects() {
   );
 }
 
-const ProjectCard = ({ title, link, imgUrl, number, description, tech }) => {
+const ProjectCard = ({ title, link, imgUrl, number, need , contribution, tech }) => {
+
+  const [myElementIsVisible, updateMyElementIsVisible] = useState();
+
+  const myRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) => {
+    const entry = entries[0];
+    updateMyElementIsVisible(entry.isIntersecting);
+  });
+  observer.observe(myRef.current)
+}, []);
+
+
+  const colors = ["#688e26", "#FAA613", "#F44708", "#F44708"];
 
   return (
     <a href={link} className="w-full block shadow-2xl">
@@ -69,7 +85,12 @@ const ProjectCard = ({ title, link, imgUrl, number, description, tech }) => {
         </h1>
       </div>
       <section className="flex flex-col">
-        <p className="p-8 text-center">{description}</p>
+        <div className="pt-8">
+          <RainbowHighlight color={colors[2]} show={myElementIsVisible}>
+            <p className="text-white text-center" ref={myRef}>{need}</p>
+          </RainbowHighlight>
+        </div>
+          <p className="p-8 text-center">{contribution}</p>
         <div className="flex justify-evenly pb-8">
           {tech.map(element => (
             <>

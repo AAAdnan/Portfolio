@@ -30,7 +30,7 @@ export default function Hero() {
       {/* Text container */}
       <div className="w-full w-1/2 mx-auto text-center md:text-left lg:p-20">
       <RainbowHighlight color={colors[0]} order="1" show={myElementIsVisible}>
-            <h1 ref={myRef} className="text-5xl md:text-8xl max-w-lg font-bold md:my-0 text-white text-center">
+            <h1 ref={myRef} className="text-4xl md:text-8xl max-w-lg font-bold md:my-0 text-white text-center">
               Developer
           </h1>
       </RainbowHighlight>
