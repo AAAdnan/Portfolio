@@ -21,6 +21,8 @@ export default function Experience() {
                 year={exp.year}
                 company={exp.company}
                 companyLink={exp.companyLink}
+                testimonial={exp.testimonial}
+                contact={exp.contact}
               />
               {idx === userData.experience.length - 1 ? null : (
                 <div className="divider-container flex flex-col items-center -mt-2">
@@ -38,7 +40,7 @@ export default function Experience() {
   );
 }
 
-const ExperienceCard = ({ title, desc, year, company, companyLink }) => {
+const ExperienceCard = ({ title, desc, year, company, companyLink, testimonial, contact }) => {
   return (
     <div className="relative experience-card border p-4 rounded-md shadow-xl bg-white dark:bg-gray-800 z-10 mx-4">
       <h1 className="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-800 font-bold dark:text-white">
@@ -49,6 +51,8 @@ const ExperienceCard = ({ title, desc, year, company, companyLink }) => {
         {company}
       </a>
       <p className="text-gray-600 dark:text-gray-400 my-2">{desc}</p>
+      {testimonial ? <p className="italic p-8">{testimonial}</p> : null }
+      {contact ? <a className="hover:scale-125" href="https://www.linkedin.com/in/anndonbosco/">{contact}</a> : null }
     </div>
   );
 };

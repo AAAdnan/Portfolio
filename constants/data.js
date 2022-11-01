@@ -77,6 +77,8 @@ const userData = {
       title: "Freelance Developer",
       year: "2022",
       desc: "Front-end Developer at Canopie, coded several other freelance projects.",
+      testimonial: "Adnan was very helpful in the intial design stage - and assisted us in narrowing down our requirements in terms of technology stack. He is an experienced front end developer and an effective communicator and highly skilled particularly with React.",
+      contact: "Ann Don Bosco - Co-Founder of Canopie"
     },
     {
       title: "Professional Trader",
