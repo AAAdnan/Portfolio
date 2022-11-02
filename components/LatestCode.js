@@ -34,7 +34,7 @@ export default function LatestCode({ repositories }) {
   return (
     <section className="bg-[#F1F1F1] -mt-40 dark:bg-gray-900 pb-10 md:pb-40">
       <div className="max-w-6xl mx-auto my-20">
-        <div className="flex flex-col justify-between items-center md:pt-40 mx-10 cursor-laptop">
+        <div className="flex flex-col justify-between items-center md:pt-40 mx-10">
         <RainbowHighlight color={colors[2]} show={myElementIsVisible}>
           <h1 ref={myRef}
           className="text-5xl lg:text-9xl max-w-lg font-bold text-gray-500 my-20 md:my-0 md:text-white dark:text-white text-center">

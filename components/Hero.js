@@ -25,7 +25,7 @@ export default function Hero() {
 
   return (
     <>
-    <section className="bg-[#F1F1F1] dark:bg-gray-900 mb-6 cursor-fancy">
+    <section className="bg-[#F1F1F1] dark:bg-gray-900 mb-6">
     <div className="flex flex-row justify-center items-start overflow-hidden">
       {/* Text container */}
       <div className="w-full w-1/2 mx-auto text-center md:text-left lg:p-20">

@@ -95,8 +95,8 @@ const ProjectCard = ({ title, link, imgUrl, number, need , contribution, tech })
           {tech.map(element => (
             <>
               <div>
-                <img className=" md:h-20 md:w-20 h-10 w-10 mb-8 hover:scale-125" src={element.image}></img>
-                <p className="hover:scale-125 text-center">{element.text}</p>
+                <img className=" md:h-20 md:w-20 h-10 w-10 mb-8" src={element.image}></img>
+                <p className="text-center">{element.text}</p>
              </div>
             </>
           ))}
