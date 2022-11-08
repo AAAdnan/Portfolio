@@ -1,13 +1,33 @@
 import React from "react";
 import userData from "@constants/data";
+import { useRef, useEffect, useState } from 'react';
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import { RainbowHighlight } from "./RainbowHighlight";
 
 export default function AboutMe() {
+
+  const colors = ["#30D5C8", "#FAA613", "#F44708", "#F44708"];
+
+  const [myElementIsVisible, updateMyElementIsVisible] = useState();
+
+  const myRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) => {
+    const entry = entries[0];
+    updateMyElementIsVisible(entry.isIntersecting);
+  });
+  observer.observe(myRef.current)
+}, []);
+
   return (
     <section className="bg-[#F1F1F1] dark:bg-gray-900">
       <div className="max-w-6xl mx-auto h-48">
-        <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
+      <RainbowHighlight color={colors[0]} order="1" show={myElementIsVisible}>
+        <h1 ref={myRef} className="text-4xl text-white md:text-8xl font-bold text-center mx-auto">
           About Me.
         </h1>
+      </RainbowHighlight>
       </div>
       <div className="bg-[#F1F1F1] -mt-10 dark:bg-gray-900">
         <div className="text-container max-w-6xl mx-auto pt-20">
