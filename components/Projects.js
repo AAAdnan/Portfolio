@@ -1,7 +1,10 @@
 import React from "react";
 import userData from "@constants/data";
 import { useRef, useEffect, useState } from 'react';
+import LatestCode from "../components/LatestCode";
 import { RainbowHighlight } from "./RainbowHighlight";
+import getLatestRepos from "@lib/getLatestRepos";
+
 
 export default function Projects() {
 
@@ -42,6 +45,7 @@ export default function Projects() {
               need={proj.need}
               contribution={proj.contribution}
               tech={proj.tech}
+              github={proj.github}
             />
           ))}
         </div>
@@ -50,7 +54,7 @@ export default function Projects() {
   );
 }
 
-const ProjectCard = ({ title, link, imgUrl, number, need , contribution, tech }) => {
+const ProjectCard = ({ title, link, imgUrl, number, need , contribution, tech, github }) => {
 
   const [myElementIsVisible, updateMyElementIsVisible] = useState();
 
@@ -101,7 +105,38 @@ const ProjectCard = ({ title, link, imgUrl, number, need , contribution, tech })
             </>
           ))}
         </div>
+        { github && <GithubRepoCard github={github} />}
       </section>
     </a>
   );
 };
+
+const GithubRepoCard = ({ github }) => {
+  return (
+    <div className="text-center text-black dark:text-white border-solid border-2 border-sky-500 p-8 rounded hover:text-white hover:bg-blue-600">
+      <a
+        href={github}
+        className="font-semibold group flex flex-row space-x-2 w-full items-center"
+      >
+        <p>View Repository </p>
+        <div className="transform  group-hover:translate-x-2 transition duration-300">
+          &rarr;
+        </div>
+      </a>
+    </div>
+  );
+};
+
+// export const getServerSideProps = async () => {
+//   console.log(process.env.GITHUB_AUTH_TOKEN);
+//   let token = process.env.GITHUB_AUTH_TOKEN;
+
+//   const repositories = await getLatestRepos(userData, token);
+//   console.log("REPOSITORIES", repositories);
+
+//   return {
+//     props: {
+//       repositories,
+//     },
+//   };
+// };

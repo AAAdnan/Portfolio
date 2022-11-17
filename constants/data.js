@@ -25,17 +25,19 @@ const userData = {
       title: "Topnomi",
       link: "https://astronomy-app.vercel.app/",
       imgUrl: "/Topnomi.png",
-      need: "App to save night sky photos",
+      need: "App to save night sky photos, interacted with the NASA API in order to produce image of the day astronomy photos",
       contribution: " Used GraphlQl on the back end as well as a new type of cloud database , dgraph, on the back-end.",
       tech: [ {image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", text: "React"}, { image: "graphql.png", text: "GraphQL"}, { image: "apollo.png", text: "Apollo"}, {image: "dgraph.png", text: "DGraph"}],
+      github: "https://github.com/AAAdnan/astronomy-app"
     },
     {
       title: "Orysha",
       link: "https://orysha-ecomm.vercel.app/",
       imgUrl: "/Orysha.png",
-      need: "A prototype of e-commerce store for a Nigerian based artesenal fashion brand.",
+      need: "E-commerce store prototype for a Nigerian based artesenal fashion brand.",
       contribution: "Leveraged GraphQL and Apollo to communicate with the front-end and stripe API to process payments.",
       tech: [{ image: "next-square.png", text: "NextJS"}, {image: "graphql.png", text: "GraphQL"}, { image: "apollo.png", text: "Apollo"}, {image: "stripe-square.png", text: "StripeAPI"}],
+      github: "https://github.com/AAAdnan/orysha-ecomm"
 
     },
     {
@@ -45,6 +47,7 @@ const userData = {
       need: "App to search for song lyrics, write and save your own song",
       contribution: "Used a redux store to store search results, react components interact with LyricsAPI to build results.",
       tech: [{ image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png", text: "React"}, {image: "redux.png", text: "Redux"}, {image: "firebase.png", text: "Firebase"}, {image: "styled-components-square.png", text: "Styled"}],
+      github: "https://github.com/AAAdnan/songifye"
     },
     {
       title: "Unsplash Album Builder",
@@ -61,6 +64,7 @@ const userData = {
       need: "App to search for Michelin restaurants worldwide -",
       contribution: "Uses node scraper, Mapbox API, Express, Nunjucks and Postrgres.",
       tech: [{image: "/node.png", text: "NodeJS"}, {image: "/postgres.png", text: "SQL"}, { image: "mapbox.png", text: "Mapbox" } , { image: "tailwind-square.jpg", text: "Tailwind"}],
+      github: "https://github.com/AAAdnan/Michelin-Search"
     },
   ],
   about: {
