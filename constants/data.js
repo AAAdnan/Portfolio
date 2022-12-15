@@ -74,7 +74,6 @@ const userData = {
       `I've been developing full-stack applications for the past five years. I work primarily with React on the front-end side and node on the back-end side.`
     ],
     currentProject: '',
-    currentProjectUrl: "https://tailwindmasterkit.com",
   },
   experience: [
     {
